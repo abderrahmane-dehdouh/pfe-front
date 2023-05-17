@@ -83,6 +83,14 @@ const requestForm = () => {
 
             {/* separation */}
           </form>
+          <div className="flex justify-center pt-2">
+          <button
+                  type="submit"
+                  className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 w-20 h-9 text-center"
+                >
+                  Submit
+                </button>
+          </div>
         </div>
       </div>
     </div>

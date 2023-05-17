@@ -22,10 +22,10 @@ const signupForm = () => {
         <div className="flex flex-col gap-2 bg-white rounded-3xl w-fit h-fit z-10 p-3 relative">
           <div className="flex flex-col gap-1 items-center">
             <h1 className="text-black font-Pop font-bold text-4xl text-center">
-              One step closer
+              Almost Done
             </h1>
             <h2 className="text-black  font-semibold text-xl py-2 px-4">
-              Fill up the form to finish your sign up
+              Fill up the form 
             </h2>
           </div>
           <form action="" className="flex justify-center gap-20">
@@ -69,19 +69,7 @@ const signupForm = () => {
                   className="inputs font-ralewey font-medium px-2 border-2 border-primary rounded-md"
                 />
               </div>
-              <div className="flex flex-col">
-                <label
-                  htmlFor="SSN"
-                  className="text-black font-semibold text-base "
-                >
-                  Social Security Number
-                </label>
-                <input
-                  type="text"
-                  name="SSN"
-                  className="inputs font-ralewey font-medium px-2 border-2 border-primary rounded-md"
-                />
-              </div>
+              
             </div>
             {/* separation */}
             <div className="flex flex-col gap-4 text-black">
@@ -138,33 +126,7 @@ const signupForm = () => {
                   ))}
                 </select>
               </div>
-              <div className="flex flex-col">
-                <label
-                  htmlFor="semestre"
-                  className="text-black font-semibold text-base "
-                >
-                  Semestre
-                </label>
-                <select
-                  name="semestre"
-                  id="semestre"
-                  className="selectInputs font-ralewey font-medium border-primary border-2 rounded-md"
-                >
-                  {" "}
-                  <option
-                    value="6"
-                    className=" text-base font-semibold"
-                  >
-                    6
-                  </option>
-                  <option
-                    value="10"
-                    className=" text-base font-semibold"
-                  >
-                    10
-                  </option>
-                </select>
-              </div>
+              
               <div className="flex flex-col">
                 <label
                   htmlFor="ac_year"
@@ -246,7 +208,7 @@ const signupForm = () => {
                   </option>
                 </select>
               </div>
-              <div className="flex flex-col gap-20">
+              <div className="flex flex-col ">
                 <div className="flex flex-col">
                   <label
                     htmlFor="Phone_num"
@@ -261,18 +223,32 @@ const signupForm = () => {
                     className="inputs font-ralewey font-medium px-2 border-2 border-primary rounded-md"
                   />
                 </div>
+                <div className="flex flex-col">
+                <label
+                  htmlFor="SSN"
+                  className="text-black font-semibold text-base "
+                >
+                  Social Security Number
+                </label>
+                <input
+                  type="text"
+                  name="SSN"
+                  className="inputs font-ralewey font-medium px-2 border-2 border-primary rounded-md"
+                />
+              </div>
 
-                <div className="flex justify-center">
+                
+              </div>
+            </div>
+          </form>
+          <div className="flex justify-center pt-2">
                   <button
                     type="submit"
-                    className="focus:outline-none text-white bg-primary hover:bg-purple-950 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 w-20 h-9 text-center"
+                    className="focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 w-24 h-9 text-center"
                   >
                     Submit
                   </button>
                 </div>
-              </div>
-            </div>
-          </form>
         </div>
       </div>
     </div>

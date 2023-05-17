@@ -8,10 +8,12 @@ import supervisorHome from "./pages/supervisorHome";
 import signupForm from "./pages/signupForm";
 import requestForm from "./pages/RequestForm";
 import Requests from "./pages/Requests";
+import account from "./pages/account";
 function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/account" Component={account} />
       <Route path="/Requests" Component={Requests} />
         <Route path="/requestForm" Component={requestForm} />
         <Route path="/signupForm" Component={signupForm} />
