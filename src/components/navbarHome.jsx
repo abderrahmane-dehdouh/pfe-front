@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-const NavbarHome = () => {
+const NavbarHome = ({ page }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleIconClick = () => {
@@ -15,12 +15,24 @@ const NavbarHome = () => {
         <h1 className="text-primary">InternShip</h1>
       </div>
       <div className="flex justify-center items-center">
+        <div>
+          {(page === "hodHome") && (
+            <Link to="/accountManagment" className="mx-2">
+              Manage Accounts
+            </Link>
+          )}
+        </div>
         <Link to="/Requests" className="mx-2">
           Requests
         </Link>
-        <Link to="/internship" className="mx-2">
-          internship
-        </Link>
+        {(page === "/studentHome" || page === "/supervisorHome" || page === "/Requests") && (
+            <Link
+              to="/internship"
+              className="mx-2"
+            >
+              internship
+            </Link>
+          )}
       </div>
       <div className="flex justify-end items-center">
         <RiAccountCircleLine
@@ -29,14 +41,14 @@ const NavbarHome = () => {
         />
 
         {showMenu && (
-          <ul className="absolute right-12 top-16 bg-white border border-gray-300 rounded-lg text-base">
-            <li className="hover:bg-gray-100  transition ease-in duration-200 p-2 border-b border-gray-300">
+          <ul className="absolute right-32 top-0 bg-white border border-gray-300 rounded-lg text-base">
+            <li className="hover:bg-gray-100 transition ease-in duration-200 p-1 border-b border-gray-300">
               <Link to="/account" className="">
                 Account
               </Link>
             </li>
-            <li className="hover:bg-gray-100  transition ease-in duration-200 p-2">
-              <Link to="/logout" className=" text-red-600">
+            <li className="hover:bg-gray-100 transition ease-in duration-200 p-1">
+              <Link to="/logout" className="text-red-600">
                 Log Out
               </Link>
             </li>

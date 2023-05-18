@@ -30,6 +30,7 @@ const Login = () => {
       <div>
         <Navbar />
       </div>
+      
       <div className="grid grid-cols-2">
         <div className="col-span-1 flex items-center justify-center">
           <img src={loginIcon} alt="login" className="w-fit h-fit" />

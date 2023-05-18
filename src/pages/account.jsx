@@ -59,9 +59,21 @@ const account = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <h2 className="font-bold">Edit Password</h2>
+            <h2 className="font-extrabold text-primary">Edit Password</h2>
           </div>
           <form action="" className="">
+          <div className="flex justify-center">
+            <div className="flex flex-col ">
+                  <label className="font-semibold" htmlFor="old_password">
+                    old password
+                  </label>
+                  <input
+                    className="  border-2 border-primary  rounded-md w-56   "
+                    type="password"
+                    id="old_password"
+                  />
+                </div>
+          </div>
             <div className="flex flex-row justify-center gap-24">
               <div className="flex flex-col">
                 <label className="font-semibold" htmlFor="new_password">
