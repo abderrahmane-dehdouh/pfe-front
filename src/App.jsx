@@ -13,10 +13,14 @@ import account from "./pages/account";
 import accountManagment from "./pages/accountManagment";
 import newaccountForm from "./pages/newaccountForm";
 import internship from "./pages/internship";
+import notation from "./pages/notation";
+import presence from "./pages/presence";
 function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/presence" Component={presence} />
+      <Route path="/notation" Component={notation} />
       <Route path="/internship" Component={internship} />
       <Route path="/newaccountForm" Component={newaccountForm} />
       <Route path="/accountManagment" Component={accountManagment} />

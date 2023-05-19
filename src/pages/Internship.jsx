@@ -6,7 +6,7 @@ const internship = () => {
   return (
     <div className="font-ralewey text-2xl">
       <div className="border-b-2 border-secondary">
-        <NavbarHome />
+        <NavbarHome page="internship" />
       </div>
       <div className="relative">
         <img src={bgIcon} alt="login" className="w-fit h-fit" />
@@ -15,8 +15,8 @@ const internship = () => {
           <div className="bg-primary opacity-50 w-full h-full absolute"></div>
 
           <div className="absolute top-0 left-0 w-full h-full ">
-            <div className="flex flex-row justify-around text-base">
-              <div className=" flex flex-col gap-7 pt-5 ">
+            <div className="flex flex-col justify-around text-base">
+              <div className=" flex flex-row justify-around gap-7 pt-5 ">
                 <div className="bg-white p-4 rounded-lg">
                   <div className="flex flex-row">
                     <p className="text-primary">First Name: </p>
@@ -41,27 +41,23 @@ const internship = () => {
                     <p id="company">Ooredoo</p>
                   </div>
 
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -86,27 +82,24 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -131,31 +124,28 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
               </div>
-              <div className=" flex flex-col gap-7 pt-5">
+              <div className=" flex flex-row justify-around gap-7 pt-5">
                 <div className="bg-white p-4 rounded-lg">
                   <div className="flex flex-row">
                     <p className="text-primary">First Name: </p>
@@ -178,27 +168,24 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -223,27 +210,24 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -268,31 +252,28 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
               </div>
-              <div className=" flex flex-col gap-7 pt-5">
+              <div className=" flex flex-row justify-around gap-7 pt-5">
                 <div className="bg-white p-4 rounded-lg">
                   <div className="flex flex-row">
                     <p className="text-primary">First Name: </p>
@@ -315,27 +296,24 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -360,27 +338,24 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -405,36 +380,25 @@ const internship = () => {
                     <p>company: </p>
                     <p id="company">Ooredoo</p>
                   </div>
-                  <div className="flex flex-row">
-                    <p>status : </p>
-                    <p id="status">pending</p>
-                  </div>
+
                   <div className="flex flex-row justify-around gap-5">
-                    <div>
-                      <button
-                        type="presence"
-                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
-                      >
-                       mark presence
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        type="internship_mark"
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/presence"
                         className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
                       >
-                        internship mark
-                      </button>
+                        Mark presence
+                      </Link>
                     </div>
+                    <div className=" flex flex-col items-end">
+                      <Link
+                        to="/notation"
+                        className="flex justify-center focus:outline-none text-white bg-red-500 hover:bg-red-700 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2  h-9 text-center"
+                      >
+                        note the intern
+                      </Link>
+                    </div>{" "}
                   </div>
-                </div>
-                <div className="flex justify-end items-end">
-                  <Link
-                    to="/RequestForm"
-                    className="focus:outline-none text-white bg-primary hover:bg-purple-950  font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 h-9"
-                  >
-                    add an internship request
-                  </Link>
                 </div>
               </div>
             </div>
@@ -446,3 +410,4 @@ const internship = () => {
 };
 
 export default internship;
+

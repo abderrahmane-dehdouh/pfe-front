@@ -6,7 +6,7 @@ const hodHome = () => {
   return (
     <div className="font-ralewey text-2xl relative">
       <div className=" border-b-2 border-secondary">
-        <NavbarHome />
+        <NavbarHome page="hodHome"/>
       </div>
       <div className="relative">
         <img src={bgIcon} alt="login" className="w-fit h-fit" />

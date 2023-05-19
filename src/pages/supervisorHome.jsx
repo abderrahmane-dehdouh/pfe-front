@@ -5,7 +5,7 @@ const supervisorHome = () => {
   return (
     <div className="font-ralewey text-2xl">
       <div className="border-b-2 border-secondary">
-        <NavbarHome />
+        <NavbarHome page="supervisorHome"/>
       </div>
       
     </div>

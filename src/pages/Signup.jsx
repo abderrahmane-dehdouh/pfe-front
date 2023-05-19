@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Navbar from "../components/navbar";
 import loginIcon from "../assets/login.svg";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
@@ -46,7 +47,7 @@ const SignUp = () => {
   return (
     <div className="signup-container font-ralewey text-2xl">
       <div>
-        <Navbar />
+        <Navbar page="Signup"/>
       </div>
       <div className="grid grid-cols-2">
         <div className="col-span-1 flex items-center justify-center">
@@ -109,20 +110,23 @@ const SignUp = () => {
               />
             </div>
             <div className=" flex flex-col items-end">
-              <a href="login" className="text-xs">
-                login
-              </a>
+            <Link
+                    to="/login"
+                    className="text-xs"
+                  >
+                    Login ?
+                  </Link>
             </div>
             <button type="button" onClick={handleTogglePassword}>
               {showPassword ? "Hide" : "Show"}
             </button>
             <div className="flex justify-center">
-              <button
-                type="submit"
-                className="focus:outline-none text-white bg-primary hover:bg-purple-950 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2 w-20 h-9"
-              >
-                Login
-              </button>
+            <Link
+                    to="/signupForm"
+                    className="focus:outline-none text-white bg-primary hover:bg-purple-950 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2  h-9"
+                  >
+                    Sign Up
+                  </Link>
             </div>
             {errorMsg && <p className="text-red-500 text-xs">{errorMsg}</p>}
           </form>

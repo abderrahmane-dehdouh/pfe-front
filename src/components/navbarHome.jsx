@@ -14,7 +14,7 @@ const NavbarHome = ({ page }) => {
       <div className="flex justify-start text-5xl">
         <h1 className="text-primary">InternShip</h1>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center gap-4">
         <div>
           {(page === "hodHome") && (
             <Link to="/accountManagment" className="mx-2">
@@ -25,7 +25,7 @@ const NavbarHome = ({ page }) => {
         <Link to="/Requests" className="mx-2">
           Requests
         </Link>
-        {(page === "/studentHome" || page === "/supervisorHome" || page === "/Requests") && (
+        {(page === "studentHome" || page === "supervisorHome" || page === "Requests" || page === "internship") && (
             <Link
               to="/internship"
               className="mx-2"

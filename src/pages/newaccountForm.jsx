@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import bgformIcon from "../assets/bgform.jpg";
 import { useState } from "react";
 
 const requestForm = () => {
@@ -11,10 +11,16 @@ const requestForm = () => {
   };
 
   return (
-    <div className="relative font-ralewey ">
-      <div className="bg-yellow-500 h-screen w-screen flex flex-col items-center justify-center gap-28 lg:gap-8">
-        <div className="flex justify-center pt-16 lg:pt-4 z-10"></div>
-        <div className="flex flex-col gap-2 bg-white rounded-3xl w-fit h-fit z-10 p-3 relative">
+    <div className="relative font-ralewey">
+      <div className=" h-screen w-screen flex flex-col items-center justify-center">
+        <div className="relative">
+          <img src={bgformIcon} alt="login" className="w-fit h-fit" />
+
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="bg-primary opacity-50 w-full h-full absolute"></div>
+
+            <div className="absolute flex w-full h-full justify-center items-center">
+              <div className="flex flex-col gap-2 bg-white rounded-3xl p-3">
           <div className="flex flex-col gap-1 items-center">
             <h1 className="text-black font-Pop font-bold text-4xl text-center">
               create a new hod account
@@ -112,6 +118,10 @@ const requestForm = () => {
             </button>
           </div>
         </div>
+        </div>
+        </div>
+        </div>
+        
       </div>
     </div>
   );
