@@ -5,9 +5,8 @@ const studentHome = () => {
   return (
     <div className="font-ralewey text-2xl">
       <div className="border-b-2 border-secondary">
-        <NavbarHome page="studentHome"/>
+        <NavbarHome page="studentHome" />
       </div>
-      
     </div>
   );
 };

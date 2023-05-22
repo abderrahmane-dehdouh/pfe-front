@@ -6,7 +6,7 @@ const hodHome = () => {
   return (
     <div className="font-ralewey text-2xl relative">
       <div className=" border-b-2 border-secondary">
-        <NavbarHome page="hodHome"/>
+        <NavbarHome page="hodHome" />
       </div>
       <div className="relative">
         <img src={bgIcon} alt="login" className="w-fit h-fit" />
@@ -15,9 +15,7 @@ const hodHome = () => {
           <div className="bg-primary opacity-50 w-full h-full absolute"></div>
 
           <div className="absolute top-0 left-0 w-full h-full ">
-          
             <div className="flex flex-row justify-around text-base">
-            
               <div className=" flex flex-col gap-7 pt-5 ">
                 <div className="bg-white p-4 rounded-lg">
                   <p className="text-primary">First Name: Abderrahmane</p>

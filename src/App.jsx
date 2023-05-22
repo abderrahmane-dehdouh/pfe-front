@@ -19,13 +19,13 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/presence" Component={presence} />
-      <Route path="/notation" Component={notation} />
-      <Route path="/internship" Component={internship} />
-      <Route path="/newaccountForm" Component={newaccountForm} />
-      <Route path="/accountManagment" Component={accountManagment} />
-      <Route path="/account" Component={account} />
-      <Route path="/Requests" Component={Requests} />
+        <Route path="/presence" Component={presence} />
+        <Route path="/notation" Component={notation} />
+        <Route path="/internship" Component={internship} />
+        <Route path="/newaccountForm" Component={newaccountForm} />
+        <Route path="/accountManagment" Component={accountManagment} />
+        <Route path="/account" Component={account} />
+        <Route path="/Requests" Component={Requests} />
         <Route path="/requestForm" Component={requestForm} />
         <Route path="/signupForm" Component={signupForm} />
         <Route path="/hodHome" Component={hodHome} />

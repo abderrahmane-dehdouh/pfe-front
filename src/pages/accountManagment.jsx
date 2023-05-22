@@ -15,9 +15,7 @@ const accountManagment = () => {
           <div className="bg-primary opacity-50 w-full h-full absolute"></div>
 
           <div className="absolute top-0 left-0 w-full h-full ">
-          
             <div className="flex flex-row justify-around text-base">
-            
               <div className=" flex flex-col gap-7 pt-5 ">
                 <div className="bg-white p-4 rounded-lg">
                   <div className="flex flex-row">
@@ -33,7 +31,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -43,7 +41,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -60,7 +57,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -70,7 +67,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -87,7 +83,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -97,7 +93,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -116,7 +111,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -126,7 +121,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -143,7 +137,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -153,7 +147,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -170,7 +163,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -180,7 +173,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -199,7 +191,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -209,7 +201,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -226,7 +217,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -236,7 +227,6 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
@@ -253,7 +243,7 @@ const accountManagment = () => {
                     <p>account type : </p>
                     <p id="account_type">student</p>
                   </div>
-                  
+
                   <div className="flex flex-row justify-around">
                     <div>
                       <button
@@ -263,23 +253,21 @@ const accountManagment = () => {
                         Delete
                       </button>
                     </div>
-                    
                   </div>
                 </div>
                 <div className="flex justify-end items-end">
-        <Link
-          to="/newaccountForm"
-          className="focus:outline-none text-white bg-primary hover:bg-purple-950  font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 h-9"
-        >
-          create new account
-        </Link>
-      </div>
+                  <Link
+                    to="/newaccountForm"
+                    className="focus:outline-none text-white bg-primary hover:bg-purple-950  font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 h-9"
+                  >
+                    create new account
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
-     
+      </div>
     </div>
   );
 };

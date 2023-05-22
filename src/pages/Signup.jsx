@@ -27,7 +27,6 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateEmail()) {
-      
       return;
     }
     if (password !== confirmPassword) {
@@ -35,7 +34,12 @@ const SignUp = () => {
       return;
     }
     try {
-      const response = await axios.post("/api/signup", { firstName, lastName, email, password });
+      const response = await axios.post("/api/signup", {
+        firstName,
+        lastName,
+        email,
+        password,
+      });
       // Gérer l'inscription réussie ici
     } catch (error) {
       setErrorMsg(error.response.data.message);
@@ -47,7 +51,7 @@ const SignUp = () => {
   return (
     <div className="signup-container font-ralewey text-2xl">
       <div>
-        <Navbar page="Signup"/>
+        <Navbar page="Signup" />
       </div>
       <div className="grid grid-cols-2">
         <div className="col-span-1 flex items-center justify-center">
@@ -80,14 +84,20 @@ const SignUp = () => {
             <div className="flex flex-col">
               <label htmlFor="email">Email</label>
               <input
-                className={`border-2 border-primary rounded-md w-96 h-9 placeholder:text-sm ${email && !validateEmail() ? "border-red-500 " : ""}`}
+                className={`border-2 border-primary rounded-md w-96 h-9 placeholder:text-sm ${
+                  email && !validateEmail() ? "border-red-500 " : ""
+                }`}
                 placeholder="@univ-constantine2.dz"
                 type="email"
                 id="email"
                 value={email}
                 onChange={handleEmailChange}
               />
-              {email && !validateEmail() && <p className="text-red-500 text-xs">Veuillez entrer votre adresse e-mail professionnelle </p>}
+              {email && !validateEmail() && (
+                <p className="text-red-500 text-xs">
+                  Veuillez entrer votre adresse e-mail professionnelle{" "}
+                </p>
+              )}
             </div>
             <div className="flex flex-col">
               <label htmlFor="password">Password</label>
@@ -110,23 +120,20 @@ const SignUp = () => {
               />
             </div>
             <div className=" flex flex-col items-end">
-            <Link
-                    to="/login"
-                    className="text-xs"
-                  >
-                    Login ?
-                  </Link>
+              <Link to="/login" className="text-xs">
+                Login ?
+              </Link>
             </div>
             <button type="button" onClick={handleTogglePassword}>
               {showPassword ? "Hide" : "Show"}
             </button>
             <div className="flex justify-center">
-            <Link
-                    to="/signupForm"
-                    className="focus:outline-none text-white bg-primary hover:bg-purple-950 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2  h-9"
-                  >
-                    Sign Up
-                  </Link>
+              <Link
+                to="/signupForm"
+                className="focus:outline-none text-white bg-primary hover:bg-purple-950 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2  h-9"
+              >
+                Sign Up
+              </Link>
             </div>
             {errorMsg && <p className="text-red-500 text-xs">{errorMsg}</p>}
           </form>

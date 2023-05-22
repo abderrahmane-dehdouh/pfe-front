@@ -6,7 +6,7 @@ const Requests = () => {
   return (
     <div className="font-ralewey text-2xl">
       <div className="border-b-2 border-secondary">
-        <NavbarHome page="Requests"/>
+        <NavbarHome page="Requests" />
       </div>
       <div className="relative">
         <img src={bgIcon} alt="login" className="w-fit h-fit" />
@@ -428,16 +428,15 @@ const Requests = () => {
                     </div>
                   </div>
                 </div>
-                
               </div>
               <div className="flex justify-end items-end pr-10 pt-5">
-                  <Link
-                    to="/RequestForm"
-                    className="focus:outline-none text-white bg-primary hover:bg-purple-950  font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 h-9"
-                  >
-                    add an internship request
-                  </Link>
-                </div>
+                <Link
+                  to="/RequestForm"
+                  className="focus:outline-none text-white bg-primary hover:bg-purple-950  font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 h-9"
+                >
+                  add an internship request
+                </Link>
+              </div>
             </div>
           </div>
         </div>

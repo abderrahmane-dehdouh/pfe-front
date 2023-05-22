@@ -9,9 +9,8 @@ const Home = () => {
       </div>
       <div className="grid grid-cols-2 h-screen text-4xl">
         <div className=" col-span-1  flex items-center pb-52 pl-20 ">
-
           <div className="text-center ">
-              <h2> internship la porte du monde professionnel</h2>
+            <h2> internship la porte du monde professionnel</h2>
           </div>
         </div>
         <div className=" col-span-1 flex justify-center pt- ">
