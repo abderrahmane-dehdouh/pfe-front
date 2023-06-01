@@ -4,16 +4,25 @@ import bgformIcon from "../assets/bgform.jpg";
 import { useState } from "react";
 
 const RequestForm = () => {
-  const [value, setValue] = useState();
+  const [title, setTitle] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [supervisorEmail, setSupervisorEmail] = useState("");
+  const [endDate, setEndDate] = useState("");
+  
   const navigate = useNavigate();
 
   const handleBack = () => {
     navigate(-1);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  };
+
   return (
     <div className="relative font-ralewey">
-      <div className=" h-screen w-screen flex flex-col items-center justify-center">
+      <div className="h-screen w-screen flex flex-col items-center justify-center">
         <div className="relative">
           <img src={bgformIcon} alt="login" className="w-fit h-fit" />
 
@@ -30,7 +39,7 @@ const RequestForm = () => {
                     Fill up the form to apply for an internship
                   </h2>
                 </div>
-                <form action="" className="flex justify-center gap-20">
+                <form onSubmit={handleSubmit} className="flex justify-center gap-20">
                   <div className="flex flex-col gap-4 text-black">
                     <div className="flex flex-col">
                       <label
@@ -42,6 +51,8 @@ const RequestForm = () => {
                       <input
                         type="text"
                         name="title"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
                         className="inputs px-2 border-2 border-primary rounded-md w-64"
                       />
                     </div>
@@ -55,6 +66,8 @@ const RequestForm = () => {
                       <input
                         type="date"
                         name="Start_date"
+                        value={startDate}
+                        onChange={(e) => setStartDate(e.target.value)}
                         className="inputs px-2 border-2 border-primary rounded-md w-64"
                       />
                     </div>
@@ -70,6 +83,8 @@ const RequestForm = () => {
                       <input
                         type="email"
                         name="supervisor_email"
+                        value={supervisorEmail}
+                        onChange={(e) => setSupervisorEmail(e.target.value)}
                         className="inputs px-2 border-2 border-primary rounded-md w-64"
                       />
                     </div>
@@ -83,6 +98,8 @@ const RequestForm = () => {
                       <input
                         type="date"
                         name="End_date"
+                        value={endDate}
+                        onChange={(e) => setEndDate(e.target.value)}
                         className="inputs px-2 border-2 border-primary rounded-md w-64"
                       />
                     </div>

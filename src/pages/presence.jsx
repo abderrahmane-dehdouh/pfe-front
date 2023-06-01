@@ -2,17 +2,31 @@ import { useNavigate } from "react-router-dom";
 import bgformIcon from "../assets/bgform.jpg";
 import { useState } from "react";
 
-const presence = () => {
-  const [value, setValue] = useState();
+const Presence = () => {
+  const [status, setStatus] = useState("");
+  const [date, setDate] = useState("");
   const navigate = useNavigate();
 
   const handleBack = () => {
     navigate(-1);
   };
 
+  const handleStatusChange = (event) => {
+    setStatus(event.target.value);
+  };
+
+  const handleDateChange = (event) => {
+    setDate(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Perform your submit logic here
+  };
+
   return (
     <div className="relative font-ralewey">
-      <div className=" h-screen w-screen flex flex-col items-center justify-center">
+      <div className="h-screen w-screen flex flex-col items-center justify-center">
         <div className="relative">
           <img src={bgformIcon} alt="login" className="w-fit h-fit" />
 
@@ -29,32 +43,24 @@ const presence = () => {
                     Fill up the form to mark the presence
                   </h2>
                 </div>
-                <form action="" className="flex justify-center gap-20">
+                <form onSubmit={handleSubmit} className="flex justify-center gap-20">
                   <div className="flex flex-col">
                     <label
                       htmlFor="status"
-                      className="text-black font-semibold text-base "
+                      className="text-black font-semibold text-base"
                     >
-                      status
+                      Status
                     </label>
                     <select
                       name="status"
                       id="status"
-                      className="selectInputs font-ralewey font-medium border-primary border-2 rounded-md "
+                      value={status}
+                      onChange={handleStatusChange}
+                      className="selectInputs font-ralewey font-medium border-primary border-2 rounded-md"
                     >
-                      <option
-                        value="present"
-                        className=" text-base font-semibold"
-                      >
-                        present
-                      </option>
-
-                      <option
-                        value="absent"
-                        className=" text-base font-semibold"
-                      >
-                        absent
-                      </option>
+                      <option value="" disabled>Select status</option>
+                      <option value="present">Present</option>
+                      <option value="absent">Absent</option>
                     </select>
                   </div>
                   <div className="flex flex-col">
@@ -62,21 +68,22 @@ const presence = () => {
                       htmlFor="date"
                       className="text-black font-semibold text-base font-Mon"
                     >
-                      date
+                      Date
                     </label>
                     <input
                       type="date"
                       name="date"
-                      className="inputs px-2 border-2 border-primary rounded-md "
+                      value={date}
+                      onChange={handleDateChange}
+                      className="inputs px-2 border-2 border-primary rounded-md"
                     />
                   </div>
-
-                  {/* separation */}
                 </form>
                 <div className="flex justify-center pt-2">
                   <button
                     type="submit"
-                    className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm  px-5 py-2.5 mb-2 w-20 h-9 text-center"
+                    className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2 w-20 h-9 text-center"
+                    onClick={handleSubmit}
                   >
                     Submit
                   </button>
@@ -90,4 +97,4 @@ const presence = () => {
   );
 };
 
-export default presence;
+export default Presence;

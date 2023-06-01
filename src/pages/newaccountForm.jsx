@@ -2,17 +2,27 @@ import { useNavigate } from "react-router-dom";
 import bgformIcon from "../assets/bgform.jpg";
 import { useState } from "react";
 
-const requestForm = () => {
-  const [value, setValue] = useState();
+const newaccountForm = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [department, setDepartment] = useState("");
+  const [hodEmail, setHodEmail] = useState("");
+  const [hodPassword, setHodPassword] = useState("");
+  
   const navigate = useNavigate();
 
   const handleBack = () => {
     navigate(-1);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  };
+
   return (
     <div className="relative font-ralewey">
-      <div className=" h-screen w-screen flex flex-col items-center justify-center">
+      <div className="h-screen w-screen flex flex-col items-center justify-center">
         <div className="relative">
           <img src={bgformIcon} alt="login" className="w-fit h-fit" />
 
@@ -29,9 +39,9 @@ const requestForm = () => {
                     Fill up the form
                   </h2>
                 </div>
-                <form action="" className="flex justify-center ">
-                  <div className="flex flex-col gap-4 text-black px-6 ">
-                    <div className="flex flex-col ">
+                <form onSubmit={handleSubmit} className="flex justify-center">
+                  <div className="flex flex-col gap-4 text-black px-6">
+                    <div className="flex flex-col">
                       <label
                         htmlFor="First_Name"
                         className="text-black font-semibold text-base font-ralewey"
@@ -42,6 +52,8 @@ const requestForm = () => {
                         type="text"
                         name="First_Name"
                         className="inputs px-2 border-2 border-primary rounded-md w-64"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                       />
                     </div>
                     <div className="flex flex-col">
@@ -55,6 +67,8 @@ const requestForm = () => {
                         type="text"
                         name="Last_Name"
                         className="inputs px-2 border-2 border-primary rounded-md w-64"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
                       />
                     </div>
                   </div>
@@ -70,6 +84,8 @@ const requestForm = () => {
                         name="dep_name"
                         id="dep_name"
                         className="selectInputs font-ralewey font-medium border-primary border-2 rounded-md"
+                        value={department}
+                        onChange={(e) => setDepartment(e.target.value)}
                       >
                         <option
                           value="TLSI"
@@ -98,6 +114,8 @@ const requestForm = () => {
                         type="email"
                         name="hod_email"
                         className="inputs px-2 border-2 border-primary rounded-md w-64 "
+                        value={hodEmail}
+                        onChange={(e) => setHodEmail(e.target.value)}
                       />
                     </div>
                     <div className="flex flex-col">
@@ -111,6 +129,8 @@ const requestForm = () => {
                         type="password"
                         name="hod_password"
                         className="inputs px-2 border-2 border-primary rounded-md w-64 "
+                        value={hodPassword}
+                        onChange={(e) => setHodPassword(e.target.value)}
                       />
                     </div>
                   </div>
@@ -135,4 +155,4 @@ const requestForm = () => {
   );
 };
 
-export default requestForm;
+export default newaccountForm;

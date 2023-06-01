@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import bgformIcon from "../assets/bgform.jpg";
+
 const Notation = () => {
   const [values, setValues] = useState({
     aptitude: "",
@@ -53,7 +54,7 @@ const Notation = () => {
 
   return (
     <div className="relative font-ralewey">
-      <div className=" h-screen w-screen flex flex-col items-center justify-center">
+      <div className="h-screen w-screen flex flex-col items-center justify-center">
         <div className="relative">
           <img src={bgformIcon} alt="login" className="w-fit h-fit" />
 
@@ -70,7 +71,7 @@ const Notation = () => {
                     Fill up the form to note the intern
                   </h2>
                 </div>
-                <form action="" className="flex justify-center gap-20">
+                <form className="flex justify-center gap-20">
                   <div className="flex flex-col gap-4 text-black">
                     <div className="flex flex-col">
                       <label
@@ -176,7 +177,7 @@ const Notation = () => {
                     type="submit"
                     className="flex justify-center focus:outline-none text-white bg-green-700 hover:bg-green-900 font-semibold rounded-lg text-sm px-5 py-2.5 mb-2 w-20 h-9 text-center"
                   >
-                    submit
+                    Submit
                   </button>
                 </div>
               </div>
